@@ -9,7 +9,7 @@ int addNumber(int first_parameter,int second_parameter)
 
 int main()
 {
-    int firstNumber {5};       //int firstNumber = 5;
+    int firstNumber  {5};       //int firstNumber = 5;
     int secondNumber {10};     //int secondNumber = 10;
     
     std::cout << "First Number : " << firstNumber << std::endl;
