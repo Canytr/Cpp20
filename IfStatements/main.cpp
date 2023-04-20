@@ -2,8 +2,8 @@
 
 int main(){
 
-	int number1 {75};
-    int number2 {60};
+	int number1{75};
+    int number2{60};
     bool result = (number1 < number2);//Expression yielding the condition
     
     /*
