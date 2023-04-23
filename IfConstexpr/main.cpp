@@ -1,108 +1,27 @@
 #include <iostream>
 
 int main(){
-
-	int number1{75};
-    int number2{60};
-    bool result = (number1 < number2);//Expression yielding the condition
-    
-    /*
-	
-	std::cout << std::boolalpha << "result : " << result << std::endl; 
-	
-	std::cout << std::endl;
-	std::cout << "free standing if statement" << std::endl;
    
-    //if(result){
-	if(result == true){
-        std::cout << number1 << " is less than " << number2 << std::endl;
-    }
-    
-    //if(!result){
-	if(!(result == true)){
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
-    }
+   constexpr bool condition {false};
 
-    */
-
-
-   	//Using else
-    /*
-	std::cout << std::endl;
-	std::cout << "using the else clause : " << std::endl;
-	
-	if(result == true){
-        std::cout << number1 << " is less than " << number2 << std::endl;
-    }else{
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
-    }
-    */
-
-
-	//Use expression as condition directly
-    /*
-	std::cout << std::endl;
-	std::cout << "Using expression as condition : " << std::endl;
-	
-	if(number1 < number2){
-        std::cout << number1 << " is less than " << number2 << std::endl;
-    }else{
-        std::cout << number1 << " is NOT less than " << number2 << std::endl;
-    }
-    */
-
-
-	//Nesting if statements
-	std::cout << std::endl;
-	std::cout << "Nesting if statements" << std::endl;
-	
-    bool red = false;
-    bool green {true};
-    bool yellow {false};
-    bool police_stop{true};
-    
-    /*
-     *      If green : go
-     *      If red, yellow : stop
-     *      If green and police_stop : stop
-     * */
-     /*
-     if(red){
-         std::cout << "Stop" << std::endl;
-     }
-     if(yellow){
-         std::cout << "Slow down" << std::endl;
-     }
-	 if(green){
-		 std::cout << "Go" << std::endl;
-	 }
-     */
-
-    /*
-    std::cout << std::endl;
-	 std::cout << "Police officer stops(verbose)" << std::endl;
-	 if(green){
-         if(police_stop){
-             std::cout << "Stop" << std::endl;
-         }
-         else{
-             std::cout << "Go" << std::endl;
-         }
-
-     }
-     */
-
-
-     std::cout << std::endl;
-	 std::cout << "Police officer stops(less verbose)" << std::endl;
-	 if(green && !police_stop){
-         std::cout << "Go" << std::endl;
-     }else{
-         std::cout << "Stop" << std::endl;
-     }
-
-
-    
-
+   if constexpr (condition){
+       std::cout << "Condition is true" << std::endl;
+   }else{
+       std::cout << "Condition is false" << std::endl;
+   }
     return 0;
 }
+
+/*
+This expression defines a C++ variable named "condition" with the "constexpr" and "bool" keywords,
+and assigns the value "false" to it.The "constexpr" keyword indicates that the value of the "condition" 
+variable is known at compile-time and cannot be changed at runtime. The "bool" keyword specifies that 
+the variable is of boolean type, which means it can only hold a value of either "true" or "false".
+In this case, the value assigned to the "condition" variable is "false". This means that the "condition" 
+variable will always have a value of "false" during runtime, and any condition or expression that 
+depends on its value will be evaluated accordingly.
+Such variables are typically used to define constants or compile-time configurations that are used in 
+different parts of the program. For example, this variable can be used in a conditional statement, 
+and since its value is always false, the block of code associated with that condition will always be 
+skipped during program execution.
+*/
