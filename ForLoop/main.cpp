@@ -2,7 +2,7 @@
 
 int main(){
 
-	//Print I love C++ 10 times : The bad way
+    //Print I love C++ 10 times : The bad way
     /*
     std::cout << "I love C++" << std::endl;
     std::cout << "I love C++" << std::endl;
