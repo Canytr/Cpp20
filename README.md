@@ -13,10 +13,10 @@ $ ./example
 Contents
 The repository contains the following directories:
 
-## examples
+## Examples
 This directory contains standalone examples that demonstrate how to use specific C++20 features.
 
-## snippets
+## Snippets
 This directory contains code snippets that illustrate specific C++20 features or best practices.
 
 ## Contributing
