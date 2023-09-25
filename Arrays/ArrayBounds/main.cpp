@@ -1,35 +1,23 @@
 #include <iostream>
 
+
 int main(){
+
+	int numbers[] {1,2,3,4,5,6,7,8,9,0};
+	
+	//Read beyond bounds : Will read garbage or crash your program
+	//std::cout << "numbers[12] : " << numbers[12] << std::endl;
+
+	//Write beyond bounds. The compiler allows it. But you don't own 
+	//the memory at index 12, so other programs may modify it and your
+	//program may read bogus data at a later time. Or you can even
+	//corrupt data used by other parts of your program
+
+	numbers[129] = 1000;
+	std::cout << "numbers[129] : " << numbers[129] << std::endl;
+
+    std::cout << "Program ending...." << std::endl;
+
     
-    //Addition
-    int number1{2};
-    int number2{7};
-
-    int result = number1 + number2;
-    std::cout << "result : " << result << std::endl;
-
-    //Subtraction
-    result = number2 - number1 ;
-    std::cout << "result : " << result << std::endl;
-
-    result = number1 - number2;
-    std::cout << "result : " << result << std::endl;
-
-    //Multiplication
-    result = number1 * number2;
-    std::cout << "result : " << result << std::endl;
-
-    //Division
-    result = number2 / number1;
-    std::cout << "result : " << result << std::endl;
-
-    //Modulus
-    result = number2 % number1;                       // 7 % 2
-    std::cout << "result : " << result << std::endl;  // 1
-
-    result = 31 % 10;
-    std::cout << "result : " << result << std::endl;  // 1
-
     return 0;
 }
